@@ -47,7 +47,7 @@ class quagga::params {
   $bgp_options = undef
   #$bgp_neighbor_group is a hash of arrays with group names and options, ie
   # quagga::bgpd::bgp_neighbor_groups => { 'name-of-group': options => [ 'peer-group', 'remote-as 65535', ], members => [ '192.168.0.10', '192.168.0.11', ], }
-  # You can add members and/or members6 (also specify networks6)
+  # You can add members and/or members6 (also specify networks6) and options6
   $bgp_neighbor_groups = undef
   #$bgp_neighbors is an array of of neighbor comands
   $bgp_neighbors = undef
