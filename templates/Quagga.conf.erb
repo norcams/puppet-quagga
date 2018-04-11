@@ -6,7 +6,7 @@ log file <%= @zebra_log_file %>
 <% if name[1][i] %>  <%= name[1][i]%><% end %><% end %>!
 <% end %><% end -%>
 router bgp <%= scope.lookupvar('bgp_as') %>
-<% if @bgp_options -%><% (1..@bgp_options.length).each do |i| %> bgp <%= @bgp_options[i-1] %>
+<% if @bgp_options -%><% (1..@bgp_options.length).each do |i| %> <%= @bgp_options[i-1] %>
 <% end%>!
 <% end -%>
 <% if @bgp_networks -%><% (1..@bgp_networks.length).each do |i| %> network <%= @bgp_networks[i-1] %>
