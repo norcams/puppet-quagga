@@ -25,8 +25,8 @@ router bgp <%= scope.lookupvar('bgp_as') %>
  address-family ipv6 <% if @bgp_neighbor_groups -%><% @bgp_neighbor_groups.each do |name| %><% if name[1]['members6'] %>
  neighbor <%= name[0] %> activate
 <% @bgp_neighbor_groups.each do |name| %><% (0..name[1]['options6'].length).each do |i| %><%
- if name[1]['options6'][i] %> neighbor <%= name[0] %> <%= name[1]['options6'][i]%><% end %><% end %><% end %>
-<%
+ if name[1]['options6'][i] %> <%= name[1]['options6'][i]%>
+<% end %><% end %><% end %><%
 (0..name[1]['members6'].length).each do |i| %><% if name[1]['members6'][i] %> neighbor <%= name[1]['members6'][i]%> peer-group <%= name[0] %>
 <% end %><% end %><% end %><% end %><% end -%>
 <% (1..@bgp_networks6.length).each do |i| %> network <%= @bgp_networks6[i-1] %>
