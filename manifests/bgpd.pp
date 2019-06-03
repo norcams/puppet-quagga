@@ -6,6 +6,7 @@ class quagga::bgpd (
   $bgp_logfile          = $quagga::params::bgp_logfile,
   $bgp_as               = $quagga::params::bgp_as,
   $bgp_options          = $quagga::params::bgp_options,
+  $bgp_options6         = $quagga::params::bgp_options6,
   $bgp_networks         = $quagga::params::bgp_networks,
   $bgp_networks6        = $quagga::params::bgp_networks6,
   $bgp_neighbors        = $quagga::params::bgp_neighbors,
