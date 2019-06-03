@@ -57,6 +57,7 @@ class quagga::params {
   #$bgp_ip_prefix is an array of ip prefixes, ie
   # quagga::bgpd::bgp_ip_prefix_list => [ 'routes-from-external seq 5 deny any', 'routes-to-external seq 5 permit 0.0.0.0/0', ],
   $bgp_ip_prefix_list = undef
+  $bgp_ipv6_prefix_list = undef
   #$bgp_route_maps is a hash of arrays with route-maps with options, ie
   # quagga::bgpd::bgp_route_maps => { 'ADVERTS permit 5' => [ 'match ip address prefix-list routes-from-external ', ' set as-path prepend 123 123', ], }
   $bgp_route_maps = undef
