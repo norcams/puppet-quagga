@@ -56,6 +56,7 @@ class quagga::params {
   #$bgp_accesslists is a hash of arrays with list names and rules, ie
   # quagga::bgpd::bgp_accesslists => { '10' => [ 'permit 10.0.0.0 0.0.0.255', 'permit 192.168.0.0 0.0.255.255', ], }
   $bgp_accesslist = undef
+  $bgp_accesslist6 = undef
   #$bgp_ip_prefix is an array of ip prefixes, ie
   # quagga::bgpd::bgp_ip_prefix_list => [ 'routes-from-external seq 5 deny any', 'routes-to-external seq 5 permit 0.0.0.0/0', ],
   $bgp_ip_prefix_list = undef
